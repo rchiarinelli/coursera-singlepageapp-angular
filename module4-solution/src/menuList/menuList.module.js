@@ -2,6 +2,6 @@
 'use strict';
 
 angular.module('RestaurantMenuApp', ['ui.router'])
-.constant('ApiBasePath', "http://davids-restaurant.herokuapp.com");
+.constant('ApiBasePath', "https://davids-restaurant.herokuapp.com");
 
 })();
