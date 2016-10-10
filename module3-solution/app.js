@@ -4,7 +4,7 @@
 angular.module('Module3MenuSearchApp', [])
 .controller('Module3MenuSearchController', Module3MenuSearchController)
 .service('Module3MenuSearchService', Module3MenuSearchService)
-.constant('ApiBasePath', "http://davids-restaurant.herokuapp.com")
+.constant('ApiBasePath', "https://davids-restaurant.herokuapp.com")
 .directive('foundItems',FoundItemsList)
 .directive('foundItem',FoundItems);
 
