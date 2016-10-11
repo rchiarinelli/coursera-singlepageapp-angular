@@ -6,8 +6,8 @@
 
   MenuItemDetailController.$inject = ['$stateParams','items'];
   function MenuItemDetailController($stateParams,items){
-    console.log('Stateparams',$stateParams);
-    console.log('Items',items);
+    console.log('$stateparams',$stateParams);
+    console.log('$items',items);
     var menuItemDetail = this;
 
     if (items

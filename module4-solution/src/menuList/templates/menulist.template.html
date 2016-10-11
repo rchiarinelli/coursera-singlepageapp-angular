@@ -1,10 +1,7 @@
 
-<div class="menu">
-  <ul>
+<ul>
     <li ng-repeat="item in $ctrl.items"
-        ui-sref="home.menuItemDetail({menuItemId: $index})">
+        ui-sref="menuDetail({menuItemId: $index})">
       {{ item.short_name }} - Name: {{item.name}}
     </li>
-  </ul>
-
-</div>
+</ul>
