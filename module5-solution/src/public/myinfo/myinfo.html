@@ -1,0 +1,57 @@
+<div class="container">
+  <h2 id="menu-categories-title" class="text-center">
+    My Info
+  </h2>
+
+  <div class="text-center" ng-controller="MyInfoController as ctrl">
+    <div ng-if="ctrl.hasMyInfo()==false">
+      <span>
+      Not Signed Up Yet. Sign up Now!
+      </span><br/><br/>
+
+    </div>
+
+    <div ng-if="ctrl.hasMyInfo();">
+      <span>
+      Last Name: {{ctrl.myInfo.lastName}}
+      </span><br/><br/>
+
+      <span>
+      First Name: {{ctrl.myInfo.firstName}}
+      </span><br/><br/>
+
+      <span>
+      Email: {{ctrl.myInfo.email}}
+      </span><br/><br/>
+
+
+      <span>
+      Phone Number: {{ctrl.myInfo.phone}}
+      </span><br/><br/>
+
+      <div>Favorite Dish</div><br/><br/>
+
+      <div class="text-center">
+        <div class="row">
+          <div class="myinfo-item-photo">
+            <div>{{ctrl.myInfo.selectedItem.short_name}}</div>
+            <img class="img-responsive" width="250" height="150" ng-src="{{ctrl.basePath}}/images/{{ctrl.myInfo.selectedItem.short_name}}.jpg" alt="{{ctrl.myInfo.selectedItem.name}}">
+          </div>
+          <div class="menu-item-price">{{ctrl.myInfo.selectedItem.price_small | currency}}<span> {{ctrl.myInfo.selectedItem.small_portion_name}}</span> {{ctrl.myInfo.selectedItem.price_large | currency}} <span>{{ctrl.myInfo.selectedItem.large_portion_name}}</span></div>
+        <div class="menu-item-description">
+          <h3 class="menu-item-title">{{ctrl.myInfo.selectedItem.name}}</h3>
+          <p class="menu-item-details">{{ctrl.myInfo.selectedItem.description}}</p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+</div>
