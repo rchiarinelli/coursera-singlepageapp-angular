@@ -7,11 +7,11 @@ angular.module('public')
 SignupController.$inject = ['MenuService'];
 function SignupController(menuService) {
   var $ctrl = this;
-  $ctrl.firstName = "Rafael";
-  $ctrl.lastName = "Chiarinelli";
-  $ctrl.email = "rchiarinelli@gmail.com";
-  $ctrl.phone = "123-321-4321";
-  $ctrl.favoriteDish = "A4";
+  $ctrl.firstName = "";
+  $ctrl.lastName = "";
+  $ctrl.email = "";
+  $ctrl.phone = "";
+  $ctrl.favoriteDish = "";
   $ctrl.validDish = true;
   $ctrl.dataSaved = false;
 
@@ -29,7 +29,7 @@ function SignupController(menuService) {
       $ctrl.selectedItem = response;
       $ctrl.validDish = true;
       $ctrl.dataSaved = menuService.addSubscriber($ctrl);
-      
+
     })
     .catch(function (error) {
       console.error(error);
